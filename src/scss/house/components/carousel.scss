@@ -1,0 +1,300 @@
+.carousel-container {
+    padding: 5px;
+    background: $dark-secondary;
+    margin-bottom: 10px;
+
+    * {
+        caret-color: transparent;
+    }
+
+    display: inline-block;
+
+    .my-carousel {
+        border-radius: 5px;
+    }
+
+    .carousel {
+        height: 38vh;
+        width: 90vw;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        padding: 0;
+        list-style: none;
+        margin-top: 0;
+        @media (min-width: 958px) {
+            @import "carousel-desktop.module";
+        }
+    }
+}
+
+.carousel__slide {
+    overflow: hidden;
+}
+
+.carousel--thumb .carousel__indicator {
+    height: 30px;
+    width: 30px;
+}
+
+.carousel__slide,
+.carousel--thumb .carousel__indicators .carousel__indicator {
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel__slide:nth-of-type(1),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(1) {
+    background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/18658350.jpg?k=5827b8840a4b6b29a8f6f10972f3e37d4e16e9bd68885c326273603c73633412&o=&hp=1");
+}
+
+.carousel__slide:nth-of-type(2),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(2) {
+    background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48599284.jpg?k=b3608ec32ee99a25e1960fbd5f79923a0f935ba17ddc39795fc8aac8e4816e03&o=&hp=1");
+}
+
+.carousel__slide:nth-of-type(3),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(3) {
+    background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/274431024.jpg?k=86e87a484757daa617d9c21e31cc1b8e1da86d9e84c8085f9893b5939ce557d0&o=&hp=1");
+}
+
+.carousel__slide:nth-of-type(4),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(4) {
+    background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48756967.jpg?k=4efcedc7ad7254fbc0413ccee842f6e0819969c528bd8cc682e160f049bec06a&o=&hp=1");
+}
+
+.carousel__slide:nth-of-type(5),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(5) {
+    background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/204131024.jpg?k=bae8e156b00ffec8190222222be0f3e706d6fc1502d97e9390d9e7bb9eabd98a&o=&hp=1");
+}
+
+.carousel__controls {
+    display: none;
+}
+
+.carousel__activator {
+    display: none;
+
+    &:nth-of-type(1):checked ~ {
+        .carousel__track {
+            transform: translateX(0%);
+        }
+
+        .carousel__slide:nth-of-type(1) {
+            transition: opacity 0.5s, transform 0.5s;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .carousel__controls:nth-of-type(1) {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel__indicators .carousel__indicator:nth-of-type(1) {
+            opacity: 1;
+        }
+    }
+
+    &:nth-of-type(2):checked ~ {
+        .carousel__track {
+            transform: translateX(-100%);
+        }
+
+        .carousel__slide:nth-of-type(2) {
+            transition: opacity 0.5s, transform 0.5s;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .carousel__controls:nth-of-type(2) {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel__indicators .carousel__indicator:nth-of-type(2) {
+            opacity: 1;
+        }
+    }
+
+    &:nth-of-type(3):checked ~ {
+        .carousel__track {
+            transform: translateX(-200%);
+        }
+
+        .carousel__slide:nth-of-type(3) {
+            transition: opacity 0.5s, transform 0.5s;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .carousel__controls:nth-of-type(3) {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel__indicators .carousel__indicator:nth-of-type(3) {
+            opacity: 1;
+        }
+    }
+
+    &:nth-of-type(4):checked ~ {
+        .carousel__track {
+            transform: translateX(-300%);
+        }
+
+        .carousel__slide:nth-of-type(4) {
+            transition: opacity 0.5s, transform 0.5s;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .carousel__controls:nth-of-type(4) {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel__indicators .carousel__indicator:nth-of-type(4) {
+            opacity: 1;
+        }
+    }
+
+    &:nth-of-type(5):checked ~ {
+        .carousel__track {
+            transform: translateX(-400%);
+        }
+
+        .carousel__slide:nth-of-type(5) {
+            transition: opacity 0.5s, transform 0.5s;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .carousel__controls:nth-of-type(5) {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel__indicators .carousel__indicator:nth-of-type(5) {
+            opacity: 1;
+        }
+    }
+}
+
+.carousel__control {
+    height: 30px;
+    width: 30px;
+    margin-top: -15px;
+    top: 50%;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: $dark-onSecondaryContainer;
+    opacity: 0.75;
+    outline: 0;
+    z-index: 3;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.carousel__control--backward {
+    left: 10px;
+    transform: rotate(-135deg);
+}
+
+.carousel__control--forward {
+    right: 10px;
+    transform: rotate(45deg);
+}
+
+.carousel__indicators {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel__indicator {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    display: inline-block;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.35;
+    margin: 0 2.5px 0 2.5px;
+    background-color: #fafafa;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.carousel__track {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease 0s;
+
+    .carousel__slide {
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+
+        &:nth-of-type(1) {
+            transform: translateX(0%);
+        }
+
+        &:nth-of-type(2) {
+            transform: translateX(100%);
+        }
+
+        &:nth-of-type(3) {
+            transform: translateX(200%);
+        }
+
+        &:nth-of-type(4) {
+            transform: translateX(300%);
+        }
+
+        &:nth-of-type(5) {
+            transform: translateX(400%);
+        }
+    }
+}
+
+.carousel--scale .carousel__slide {
+    transform: scale(0);
+}
+
+.carousel__slide {
+    height: 100%;
+    position: absolute;
+    overflow-y: auto;
+    opacity: 0;
+}

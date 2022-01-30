@@ -1,0 +1,553 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: url("../../img/background.jpg") center no-repeat;
+  background-size: cover;
+  padding: 10px;
+  scroll-behavior: smooth;
+  min-height: 100vh; }
+  body > * {
+    max-width: 1140px;
+    margin: auto; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1d02c;
+  border: 5px solid transparent;
+  border-radius: 11px;
+  background-clip: content-box; }
+
+::-webkit-scrollbar {
+  width: 18px; }
+
+::-webkit-scrollbar-track {
+  background-color: #106e20; }
+
+header {
+  margin-bottom: 10px !important;
+  display: flex; }
+  header #logo {
+    line-height: 0; }
+  header img {
+    background: #deed49;
+    border: 0px solid black;
+    border-radius: 5px;
+    width: 100%; }
+  header button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #deed49;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px; }
+  header #logo img,
+  header button {
+    transition: all 0.2s; }
+    header #logo img:hover,
+    header button:hover {
+      background: #c1d02c; }
+    header #logo img:active,
+    header button:active {
+      transform: scale(0.95); }
+  header #login {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px; }
+  header #login-desktop {
+    display: none; }
+  header #login,
+  header #login-desktop {
+    width: 100%;
+    justify-content: flex-end;
+    flex: 1; }
+  @media (min-width: 768px) {
+    header #login {
+      display: none; }
+    header #login-desktop {
+      display: flex; }
+      header #login-desktop button:first-child {
+        margin-right: 20px; } }
+
+nav {
+  background: #deed49; }
+  nav #search {
+    width: 100%;
+    background: #9ef898;
+    border-radius: 6px;
+    border: 1px solid black;
+    height: 35px;
+    text-align: center; }
+    nav #search::placeholder {
+      text-align: center; }
+  nav #input-elements {
+    flex: 5; }
+  nav > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px; }
+    nav > form input {
+      outline: none; }
+      nav > form input:focus-visible {
+        outline: 2px solid #82db7e; }
+    nav > form #trip-dates {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch; }
+      nav > form #trip-dates div {
+        text-align: center;
+        flex: 1; }
+        nav > form #trip-dates div p {
+          margin-bottom: auto; }
+      nav > form #trip-dates input {
+        width: 100%;
+        background: #9ef898;
+        border-radius: 6px;
+        border: 1px solid black;
+        height: 35px;
+        min-width: 100%; }
+      nav > form #trip-dates ::-webkit-datetime-edit-fields-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-left: 45px; }
+      nav > form #trip-dates ::-webkit-calendar-picker-indicator {
+        cursor: pointer; }
+    nav > form input[type="submit"] {
+      flex: 1;
+      padding: 11px;
+      border: 1px solid black;
+      background-color: #106e20;
+      border-radius: 5px;
+      color: white;
+      transition: all 0.2s;
+      margin-top: 11px;
+      transition: all 0.2s;
+      cursor: pointer; }
+      nav > form input[type="submit"]:hover {
+        background: #003907; }
+      nav > form input[type="submit"]:active {
+        transform: scale(0.95); }
+    @media (min-width: 768px) {
+      nav > form {
+        flex-direction: row; }
+        nav > form input[type="submit"] {
+          margin: 0 0 0 26px; }
+        nav > form #search {
+          padding: 20px; }
+        nav > form img {
+          width: 200px;
+          object-fit: initial;
+          aspect-ratio: initial; } }
+
+h1 {
+  text-align: center;
+  color: #c1d02c;
+  font-family: Rancho;
+  font-size: 60px;
+  text-shadow: 0.04em 0.04em 0 #000 !important; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  main h1 {
+    margin: 0px; }
+
+#wrapper {
+  display: flex;
+  flex-wrap: wrap; }
+  #wrapper #house {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; }
+    #wrapper #house #book-now {
+      width: 100%; }
+    #wrapper #house #book-now button {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid black;
+      background-color: #106e20;
+      border-radius: 5px;
+      color: white;
+      transition: all 0.2s;
+      transition: all 0.2s;
+      cursor: pointer; }
+      #wrapper #house #book-now button:hover {
+        background: #003907; }
+      #wrapper #house #book-now button:active {
+        transform: scale(0.95); }
+      #wrapper #house #book-now button a {
+        text-decoration: none;
+        color: white; }
+    @media (min-width: 768px) {
+      #wrapper #house {
+        margin: 10px 10px 10px 0px; } }
+    #wrapper #house .carousel-container {
+      padding: 5px;
+      background: #c1d02c;
+      margin-bottom: 10px;
+      display: inline-block; }
+      #wrapper #house .carousel-container * {
+        caret-color: transparent; }
+      #wrapper #house .carousel-container .my-carousel {
+        border-radius: 5px; }
+      #wrapper #house .carousel-container .carousel {
+        height: 38vh;
+        width: 90vw;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        padding: 0;
+        list-style: none;
+        margin-top: 0; }
+        @media (min-width: 958px) {
+          #wrapper #house .carousel-container .carousel {
+            width: 920px; }
+          #wrapper #house .carousel-container .carousel .carousel__slide:nth-of-type(1),
+          #wrapper #house .carousel-container .carousel .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(1) {
+            background: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/18658350.jpg?k=5827b8840a4b6b29a8f6f10972f3e37d4e16e9bd68885c326273603c73633412&o=&hp=1") center center/contain no-repeat, url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/18658350.jpg?k=5827b8840a4b6b29a8f6f10972f3e37d4e16e9bd68885c326273603c73633412&o=&hp=1") center center/cover; }
+          #wrapper #house .carousel-container .carousel .carousel__slide:nth-of-type(2),
+          #wrapper #house .carousel-container .carousel .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(2) {
+            background: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48599284.jpg?k=b3608ec32ee99a25e1960fbd5f79923a0f935ba17ddc39795fc8aac8e4816e03&o=&hp=1") center center/contain no-repeat, url("../../img/backgroundopacity.png") center center/cover; }
+          #wrapper #house .carousel-container .carousel .carousel__slide:nth-of-type(3),
+          #wrapper #house .carousel-container .carousel .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(3) {
+            background: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/274431024.jpg?k=86e87a484757daa617d9c21e31cc1b8e1da86d9e84c8085f9893b5939ce557d0&o=&hp=1") center center/contain no-repeat, url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/274431024.jpg?k=86e87a484757daa617d9c21e31cc1b8e1da86d9e84c8085f9893b5939ce557d0&o=&hp=1") center center/cover; }
+          #wrapper #house .carousel-container .carousel .carousel__slide:nth-of-type(4),
+          #wrapper #house .carousel-container .carousel .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(4) {
+            background: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48756967.jpg?k=4efcedc7ad7254fbc0413ccee842f6e0819969c528bd8cc682e160f049bec06a&o=&hp=1") center center/contain no-repeat, url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48756967.jpg?k=4efcedc7ad7254fbc0413ccee842f6e0819969c528bd8cc682e160f049bec06a&o=&hp=1") center center/cover; }
+          #wrapper #house .carousel-container .carousel .carousel__slide:nth-of-type(5),
+          #wrapper #house .carousel-container .carousel .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(5) {
+            background: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/204131024.jpg?k=bae8e156b00ffec8190222222be0f3e706d6fc1502d97e9390d9e7bb9eabd98a&o=&hp=1") center center/contain no-repeat, url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/204131024.jpg?k=bae8e156b00ffec8190222222be0f3e706d6fc1502d97e9390d9e7bb9eabd98a&o=&hp=1") center center/cover; } }
+    #wrapper #house .carousel__slide {
+      overflow: hidden; }
+    #wrapper #house .carousel--thumb .carousel__indicator {
+      height: 30px;
+      width: 30px; }
+    #wrapper #house .carousel__slide,
+    #wrapper #house .carousel--thumb .carousel__indicators .carousel__indicator {
+      background-size: cover;
+      background-position: center; }
+    #wrapper #house .carousel__slide:nth-of-type(1),
+    #wrapper #house .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(1) {
+      background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/18658350.jpg?k=5827b8840a4b6b29a8f6f10972f3e37d4e16e9bd68885c326273603c73633412&o=&hp=1"); }
+    #wrapper #house .carousel__slide:nth-of-type(2),
+    #wrapper #house .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(2) {
+      background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48599284.jpg?k=b3608ec32ee99a25e1960fbd5f79923a0f935ba17ddc39795fc8aac8e4816e03&o=&hp=1"); }
+    #wrapper #house .carousel__slide:nth-of-type(3),
+    #wrapper #house .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(3) {
+      background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/274431024.jpg?k=86e87a484757daa617d9c21e31cc1b8e1da86d9e84c8085f9893b5939ce557d0&o=&hp=1"); }
+    #wrapper #house .carousel__slide:nth-of-type(4),
+    #wrapper #house .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(4) {
+      background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48756967.jpg?k=4efcedc7ad7254fbc0413ccee842f6e0819969c528bd8cc682e160f049bec06a&o=&hp=1"); }
+    #wrapper #house .carousel__slide:nth-of-type(5),
+    #wrapper #house .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(5) {
+      background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/204131024.jpg?k=bae8e156b00ffec8190222222be0f3e706d6fc1502d97e9390d9e7bb9eabd98a&o=&hp=1"); }
+    #wrapper #house .carousel__controls {
+      display: none; }
+    #wrapper #house .carousel__activator {
+      display: none; }
+      #wrapper #house .carousel__activator:nth-of-type(1):checked ~ .carousel__track {
+        transform: translateX(0%); }
+      #wrapper #house .carousel__activator:nth-of-type(1):checked ~ .carousel__slide:nth-of-type(1) {
+        transition: opacity 0.5s, transform 0.5s;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        transform: scale(1); }
+      #wrapper #house .carousel__activator:nth-of-type(1):checked ~ .carousel__controls:nth-of-type(1) {
+        display: block;
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(1):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(1) {
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(2):checked ~ .carousel__track {
+        transform: translateX(-100%); }
+      #wrapper #house .carousel__activator:nth-of-type(2):checked ~ .carousel__slide:nth-of-type(2) {
+        transition: opacity 0.5s, transform 0.5s;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        transform: scale(1); }
+      #wrapper #house .carousel__activator:nth-of-type(2):checked ~ .carousel__controls:nth-of-type(2) {
+        display: block;
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(2):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(2) {
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(3):checked ~ .carousel__track {
+        transform: translateX(-200%); }
+      #wrapper #house .carousel__activator:nth-of-type(3):checked ~ .carousel__slide:nth-of-type(3) {
+        transition: opacity 0.5s, transform 0.5s;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        transform: scale(1); }
+      #wrapper #house .carousel__activator:nth-of-type(3):checked ~ .carousel__controls:nth-of-type(3) {
+        display: block;
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(3):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(3) {
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(4):checked ~ .carousel__track {
+        transform: translateX(-300%); }
+      #wrapper #house .carousel__activator:nth-of-type(4):checked ~ .carousel__slide:nth-of-type(4) {
+        transition: opacity 0.5s, transform 0.5s;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        transform: scale(1); }
+      #wrapper #house .carousel__activator:nth-of-type(4):checked ~ .carousel__controls:nth-of-type(4) {
+        display: block;
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(4):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(4) {
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(5):checked ~ .carousel__track {
+        transform: translateX(-400%); }
+      #wrapper #house .carousel__activator:nth-of-type(5):checked ~ .carousel__slide:nth-of-type(5) {
+        transition: opacity 0.5s, transform 0.5s;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        transform: scale(1); }
+      #wrapper #house .carousel__activator:nth-of-type(5):checked ~ .carousel__controls:nth-of-type(5) {
+        display: block;
+        opacity: 1; }
+      #wrapper #house .carousel__activator:nth-of-type(5):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(5) {
+        opacity: 1; }
+    #wrapper #house .carousel__control {
+      height: 30px;
+      width: 30px;
+      margin-top: -15px;
+      top: 50%;
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      border-width: 5px 5px 0 0;
+      border-style: solid;
+      border-color: #deed49;
+      opacity: 0.75;
+      outline: 0;
+      z-index: 3; }
+      #wrapper #house .carousel__control:hover {
+        opacity: 1; }
+    #wrapper #house .carousel__control--backward {
+      left: 10px;
+      transform: rotate(-135deg); }
+    #wrapper #house .carousel__control--forward {
+      right: 10px;
+      transform: rotate(45deg); }
+    #wrapper #house .carousel__indicators {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center; }
+    #wrapper #house .carousel__indicator {
+      height: 15px;
+      width: 15px;
+      border-radius: 100%;
+      display: inline-block;
+      z-index: 2;
+      cursor: pointer;
+      opacity: 0.35;
+      margin: 0 2.5px 0 2.5px;
+      background-color: #fafafa; }
+      #wrapper #house .carousel__indicator:hover {
+        opacity: 0.75; }
+    #wrapper #house .carousel__track {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 0;
+      margin: 0;
+      transition: transform 0.5s ease 0s; }
+      #wrapper #house .carousel__track .carousel__slide {
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1; }
+        #wrapper #house .carousel__track .carousel__slide:nth-of-type(1) {
+          transform: translateX(0%); }
+        #wrapper #house .carousel__track .carousel__slide:nth-of-type(2) {
+          transform: translateX(100%); }
+        #wrapper #house .carousel__track .carousel__slide:nth-of-type(3) {
+          transform: translateX(200%); }
+        #wrapper #house .carousel__track .carousel__slide:nth-of-type(4) {
+          transform: translateX(300%); }
+        #wrapper #house .carousel__track .carousel__slide:nth-of-type(5) {
+          transform: translateX(400%); }
+    #wrapper #house .carousel--scale .carousel__slide {
+      transform: scale(0); }
+    #wrapper #house .carousel__slide {
+      height: 100%;
+      position: absolute;
+      overflow-y: auto;
+      opacity: 0; }
+  #wrapper #detail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-radius: 5px;
+    margin-top: 8px;
+    text-align: center;
+    background: #deed49;
+    padding: 10px; }
+    #wrapper #detail h2 {
+      color: #00530e;
+      margin: 5px; }
+    #wrapper #detail #info1 {
+      display: flex;
+      justify-content: space-around; }
+    @media (min-width: 958px) {
+      #wrapper #detail {
+        margin: 10px 0px 10px 10px;
+        justify-content: space-evenly; } }
+
+/* Label styles */
+#commentform {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-top: 8px;
+  background: #deed49;
+  padding: 10px; }
+  #commentform #reserve-data h2 {
+    text-align: center; }
+  #commentform #reserve-people-desktop {
+    display: none; }
+  #commentform #reserve-people label {
+    display: block;
+    text-align: initial; }
+  @media (min-width: 768px) {
+    #commentform #reserve-people-desktop {
+      display: block;
+      padding: 5px 0;
+      flex: 2;
+      font-size: 0.75rem;
+      animation: silo-fade 0.2s; }
+    #commentform #reserve-people {
+      display: none; }
+    #commentform #reserve-data > div {
+      display: flex;
+      justify-content: space-around; }
+    #commentform #user-data > h2 {
+      text-align: center; }
+    #commentform #trip-dates {
+      display: flex;
+      flex: 3;
+      align-items: center;
+      justify-content: space-around; }
+      #commentform #trip-dates label h2 {
+        text-align: center; } }
+  #commentform [class*="comment-form"] label,
+  #commentform #trip-dates label, #commentform #reserve-people-desktop {
+    padding: 5px 0;
+    font-size: 0.75rem;
+    animation: silo-fade 0.2s; }
+    #commentform [class*="comment-form"] label input, #commentform [class*="comment-form"] label select,
+    #commentform #trip-dates label input,
+    #commentform #trip-dates label select, #commentform #reserve-people-desktop input, #commentform #reserve-people-desktop select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid black;
+      height: 35px;
+      text-align: center;
+      outline: none; }
+      #commentform [class*="comment-form"] label input:focus-visible, #commentform [class*="comment-form"] label select:focus-visible,
+      #commentform #trip-dates label input:focus-visible,
+      #commentform #trip-dates label select:focus-visible, #commentform #reserve-people-desktop input:focus-visible, #commentform #reserve-people-desktop select:focus-visible {
+        outline: 2px solid #82db7e; }
+      #commentform [class*="comment-form"] label input[type="date"]:not(.has-value):after, #commentform [class*="comment-form"] label select[type="date"]:not(.has-value):after,
+      #commentform #trip-dates label input[type="date"]:not(.has-value):after,
+      #commentform #trip-dates label select[type="date"]:not(.has-value):after, #commentform #reserve-people-desktop input[type="date"]:not(.has-value):after, #commentform #reserve-people-desktop select[type="date"]:not(.has-value):after {
+        content: attr(placeholder); }
+      #commentform [class*="comment-form"] label input:invalid, #commentform [class*="comment-form"] label select:invalid,
+      #commentform #trip-dates label input:invalid,
+      #commentform #trip-dates label select:invalid, #commentform #reserve-people-desktop input:invalid, #commentform #reserve-people-desktop select:invalid {
+        border: 1px solid #ffdad4;
+        background-color: #b9232685; }
+      #commentform [class*="comment-form"] label input:focus:invalid, #commentform [class*="comment-form"] label select:focus:invalid,
+      #commentform #trip-dates label input:focus:invalid,
+      #commentform #trip-dates label select:focus:invalid, #commentform #reserve-people-desktop input:focus:invalid, #commentform #reserve-people-desktop select:focus:invalid {
+        border: 1px solid #ffdad4; }
+      #commentform [class*="comment-form"] label input:valid, #commentform [class*="comment-form"] label select:valid,
+      #commentform #trip-dates label input:valid,
+      #commentform #trip-dates label select:valid, #commentform #reserve-people-desktop input:valid, #commentform #reserve-people-desktop select:valid {
+        border: 1px solid #9ef898;
+        background-color: #9ef898; }
+      #commentform [class*="comment-form"] label input::placeholder, #commentform [class*="comment-form"] label select::placeholder,
+      #commentform #trip-dates label input::placeholder,
+      #commentform #trip-dates label select::placeholder, #commentform #reserve-people-desktop input::placeholder, #commentform #reserve-people-desktop select::placeholder {
+        color: initial;
+        text-align: center; }
+  #commentform h2 {
+    color: #00530e;
+    margin: 5px; }
+  #commentform input[type="submit"] {
+    font-size: 1rem;
+    margin: 15px auto;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid black;
+    background-color: #106e20;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.2s;
+    cursor: pointer; }
+    #commentform input[type="submit"]:hover {
+      background: #003907; }
+    #commentform input[type="submit"]:active {
+      transform: scale(0.95); }
+    #commentform input[type="submit"] a {
+      text-decoration: none;
+      color: white; }
+
+footer {
+  border-radius: 5px; }
+  footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c1d02c;
+    height: 60px;
+    text-decoration: none;
+    text-transform: uppercase; }
+    footer a:hover {
+      background: #2e3400;
+      color: #e0e3e3; }
+  footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px; }
+  footer li {
+    position: relative;
+    flex-grow: 1;
+    text-align: center; }
+  footer a {
+    text-decoration: none;
+    color: #191c1d; }
+  footer li:nth-child(4) > a {
+    border-radius: 0 0 5px 5px; }
+  footer li:nth-child(1) > a {
+    border-radius: 5px 0 0 0; }
+  footer li:nth-child(3) > a {
+    border-radius: 0 5px 0 0; }
+  @media screen and (min-width: 532px) {
+    footer li:nth-child(3) > a {
+      border-radius: 0 0 0 0; }
+    footer li:nth-child(4) > a {
+      border-radius: 0 5px 5px 0; }
+    footer li:nth-child(1) > a {
+      border-radius: 5px 0 0 5px; } }

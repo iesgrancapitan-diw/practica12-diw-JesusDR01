@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: url("../../img/background.jpg") center no-repeat;
+  background-size: cover;
+  padding: 10px;
+  scroll-behavior: smooth;
+  min-height: 100vh; }
+  body > * {
+    max-width: 1140px;
+    margin: auto; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1d02c;
+  border: 5px solid transparent;
+  border-radius: 11px;
+  background-clip: content-box; }
+
+::-webkit-scrollbar {
+  width: 18px; }
+
+::-webkit-scrollbar-track {
+  background-color: #106e20; }
+
+header {
+  margin-bottom: 10px !important;
+  display: flex; }
+  header #logo {
+    line-height: 0; }
+  header img {
+    background: #deed49;
+    border: 0px solid black;
+    border-radius: 5px;
+    width: 100%; }
+  header button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #deed49;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px; }
+  header #logo img,
+  header button {
+    transition: all 0.2s; }
+    header #logo img:hover,
+    header button:hover {
+      background: #c1d02c; }
+    header #logo img:active,
+    header button:active {
+      transform: scale(0.95); }
+  header #login {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px; }
+  header #login-desktop {
+    display: none; }
+  header #login,
+  header #login-desktop {
+    width: 100%;
+    justify-content: flex-end;
+    flex: 1; }
+  @media (min-width: 768px) {
+    header #login {
+      display: none; }
+    header #login-desktop {
+      display: flex; }
+      header #login-desktop button:first-child {
+        margin-right: 20px; } }
+
+h1 {
+  text-align: center;
+  color: #c1d02c;
+  font-family: Rancho;
+  font-size: 60px;
+  text-shadow: 0.04em 0.04em 0 #000 !important; }
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 64vh;
+  flex-wrap: wrap;
+  align-content: center; }
+
+#discover button {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica, "sans-serif";
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #deed49;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px; }
+  #discover button:hover {
+    background: #c1d02c; }
+  #discover button > svg {
+    width: 34px;
+    margin-left: 10px;
+    animation: arrow_move 0.5s infinite alternate; }
+  #discover button:active {
+    transform: scale(0.95); }
+
+@keyframes arrow_move {
+  from {
+    margin-left: 5px; }
+  to {
+    margin-left: 10px; } }
+
+footer {
+  border-radius: 5px; }
+  footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c1d02c;
+    height: 60px;
+    text-decoration: none;
+    text-transform: uppercase; }
+    footer a:hover {
+      background: #2e3400;
+      color: #e0e3e3; }
+  footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px; }
+  footer li {
+    position: relative;
+    flex-grow: 1;
+    text-align: center; }
+  footer a {
+    text-decoration: none;
+    color: #191c1d; }
+  footer li:nth-child(4) > a {
+    border-radius: 0 0 5px 5px; }
+  footer li:nth-child(1) > a {
+    border-radius: 5px 0 0 0; }
+  footer li:nth-child(3) > a {
+    border-radius: 0 5px 0 0; }
+  @media screen and (min-width: 532px) {
+    footer li:nth-child(3) > a {
+      border-radius: 0 0 0 0; }
+    footer li:nth-child(4) > a {
+      border-radius: 0 5px 5px 0; }
+    footer li:nth-child(1) > a {
+      border-radius: 5px 0 0 5px; } }

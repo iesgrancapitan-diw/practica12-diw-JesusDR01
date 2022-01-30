@@ -1,0 +1,25 @@
+#web main {
+  flex: 3; }
+
+#web select {
+  display: block;
+  border-radius: 6px;
+  border: 1px solid #106e20;
+  height: 48px;
+  text-align: center;
+  outline: none;
+  background-color: #9ef898; }
+
+#web #head {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  #web #head div {
+    flex: 3; }
+  #web #head select {
+    flex: 2;
+    width: 76%;
+    margin-left: 50px; }
+
+footer {
+  margin-bottom: initial; }

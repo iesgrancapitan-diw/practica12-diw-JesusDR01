@@ -1,0 +1,11 @@
+.range-slider {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  height: 4em; }
+  .range-slider svg,
+  .range-slider input[type="range"] {
+    position: absolute;
+    left: 0;
+    bottom: 0; }

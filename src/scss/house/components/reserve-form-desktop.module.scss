@@ -1,0 +1,33 @@
+& {
+    #reserve-people-desktop {
+        display: block;
+        padding: 5px 0;
+        flex: 2;
+        font-size: 0.75rem;
+        animation: silo-fade 0.2s;
+    }
+    #reserve-people {
+        display: none;
+    }
+
+    #reserve-data {
+        > div {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    #user-data {
+        > h2 {
+            text-align: center;
+        }
+    }
+    #trip-dates {
+        display: flex;
+        flex: 3;
+        align-items: center;
+        justify-content: space-around;
+        label h2 {
+            text-align: center;
+        }
+    }
+}

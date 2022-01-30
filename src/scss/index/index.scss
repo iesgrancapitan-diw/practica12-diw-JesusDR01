@@ -1,0 +1,16 @@
+@import "../common/util/variables";
+@import "../common/util/colors";
+@import "../common/util/mixins";
+@import "../common/components/body-base";
+@import "../common/components/scrollBar";
+@import "../common/components/header";
+@import "../common/components/title";
+main {
+    display: flex;
+    justify-content: center;
+    height: 64vh;
+    flex-wrap: wrap;
+    align-content: center;
+}
+@import "./components/discover";
+@import "../common/components/footer";

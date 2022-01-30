@@ -1,0 +1,52 @@
+header {
+    margin-bottom: 10px !important;
+    display: flex;
+    #logo {
+        line-height: 0;
+    }
+    img {
+        background: $dark-onSecondaryContainer;
+        border: 0px solid black;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    button {
+        cursor: pointer;
+        font-weight: 700;
+        font-family: Helvetica, "sans-serif";
+        padding: 10px 20px;
+        border-radius: 5px;
+        background: $dark-onSecondaryContainer;
+        border: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    #logo img,
+    button {
+        @include btnEffect($dark-secondary);
+    }
+
+    #login {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 10px;
+    }
+
+    #login-desktop {
+        display: none;
+    }
+
+    #login,
+    #login-desktop {
+        width: 100%;
+        justify-content: flex-end; //responsive for #login-desktop
+        flex: 1;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        @import "header-desktop.module";
+    }
+}

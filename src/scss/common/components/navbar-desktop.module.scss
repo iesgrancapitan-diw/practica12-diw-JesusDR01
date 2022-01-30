@@ -1,0 +1,14 @@
+& {
+    flex-direction: row;
+    input[type="submit"]{
+        margin: 0 0 0 26px;
+    }
+    #search{
+        padding: 20px;
+    }
+    img{
+        width: 200px;
+        object-fit: initial;
+        aspect-ratio: initial;
+    }
+}

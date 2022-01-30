@@ -1,0 +1,77 @@
+nav {
+    background: $dark-onSecondaryContainer;
+    #search {
+        width: 100%;
+        background: $dark-onTertiaryContainer;
+        border-radius: 6px;
+        border: 1px solid black;
+        height: 35px;
+        text-align: center;
+        &::placeholder {
+            text-align: center;
+        }
+    }
+    #input-elements {
+        flex: 5;
+    }
+    > form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        input {
+            outline: none;
+            &:focus-visible {
+                outline: 2px solid $dark-tertiary;
+            }
+        }
+        #trip-dates {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: stretch;
+
+            div {
+                text-align: center;
+                flex: 1;
+                p {
+                    margin-bottom: auto;
+                }
+            }
+
+            input {
+                width: 100%;
+                background: $dark-onTertiaryContainer;
+                border-radius: 6px;
+                border: 1px solid black;
+                height: 35px;
+                min-width: 100%;
+            }
+            ::-webkit-datetime-edit-fields-wrapper {
+                display: flex;
+                justify-content: center;
+                margin-left: 45px;
+            }
+
+            ::-webkit-calendar-picker-indicator {
+                cursor: pointer;
+            }
+        }
+
+        input[type="submit"] {
+            flex: 1;
+            padding: 11px;
+            border: 1px solid black;
+            background-color: $light-tertiary;
+            border-radius: 5px;
+            color: white;
+            transition: all 0.2s;
+            margin-top: 11px;
+            @include btnEffect($dark-onTertiary);
+            cursor: pointer;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            @import "navbar-desktop.module";
+        }
+    }
+}

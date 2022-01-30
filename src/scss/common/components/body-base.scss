@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: url("../../img/background.jpg") center no-repeat;
+    background-size: cover;
+    padding: 10px;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    > * {
+        max-width: 1140px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,37 @@
+#discover button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all 0.2s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: $dark-onSecondaryContainer;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    
+    &:hover {
+        background: $dark-secondary;
+    }
+
+    > svg {
+        width: 34px;
+        margin-left: 10px;
+        animation: arrow_move 0.5s infinite alternate;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    @keyframes arrow_move {
+        from {
+            margin-left: 5px;
+        }
+
+        to {
+            margin-left: 10px;
+        }
+    }
+}

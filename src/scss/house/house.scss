@@ -1,0 +1,28 @@
+@import "../common/util/variables";
+@import "../common/util/colors";
+@import "../common/util/mixins";
+@import "../common/components/body-base";
+@import "../common/components/scrollBar";
+@import "../common/components/header";
+@import "../common/components/navbar";
+@import "../common/components/title";
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin: 0px;
+    }
+}
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @import "./components/house";
+    @import "./components/detail";
+}
+
+@import "./components/reserve-form";
+@import "../common/components/footer";

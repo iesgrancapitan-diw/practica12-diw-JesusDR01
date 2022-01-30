@@ -1,0 +1,32 @@
+@import "../common/util/variables";
+@import "../common/util/colors";
+@import "../common/util/mixins";
+@import "../common/components/body-base";
+@import "../common/components/scrollBar";
+@import "../common/components/header";
+@import "../common/components/navbar";
+@import "../common/components/title";
+
+main {
+    select{
+        display: none;
+    }
+}
+
+#web{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+footer{
+    margin-bottom: 70px;
+}
+
+@media (min-width: $breakpoint-max-tablet) {
+    @import "search-desktop.module";
+}
+
+@import "./components/aside";
+@import "../common/components/house-list";
+@import "../common/components/footer";

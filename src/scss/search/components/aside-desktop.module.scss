@@ -1,0 +1,85 @@
+& {
+    flex: 1;
+    padding: 11px;
+    .mobile-aside {
+        display: none;
+    }
+    .desktop-aside {
+        display: flex;
+        flex-direction: column;
+
+        button {
+            align-self: center;
+            flex: 1;
+            padding: 11px;
+            color: $dark-house !important;
+            border: 1px solid black;
+            background-color: $dark-onTertiaryContainer;
+            border-radius: 5px;
+            color: white;
+            transition: all 0.2s;
+            margin-top: 11px;
+            cursor: pointer;
+            @include btnEffect($light-house);
+        }
+    }
+
+    #content {
+        display: block !important;
+        position: initial;
+        height: initial;
+        width: initial;
+        padding: 16px;
+        border-radius: 5px;
+
+        #order,
+        #close,
+        > h2 {
+            display: none;
+        }
+
+        #price {
+            .arrow {
+                display: none;
+            }
+            #range-slider {
+                display: block;
+                input::-webkit-slider-runnable-track {
+                    background: $light-tertiary !important;
+                }
+                input[type="number"] {
+                    border: 1px solid $light-tertiary !important;
+                }
+                @import "./price-slider";
+            }
+        }
+
+        #price {
+            color: $light-tertiary;
+            background-color: $dark-onSecondaryContainer;
+            h3 {
+                cursor: initial;
+                color: $light-tertiary;
+                &:hover {
+                    background: initial;
+                }
+                &:active {
+                    transform: initial;
+                }
+            }
+        }
+
+        #services {
+            position: relative;
+            div {
+                position: absolute;
+                background: $light-tertiary;
+                overflow: auto;
+                top: 41px;
+                width: 300px;
+                height: 122px;
+                flex-direction: column;
+            }
+        }
+    }
+}

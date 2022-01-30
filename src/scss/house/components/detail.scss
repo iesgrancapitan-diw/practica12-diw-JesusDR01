@@ -1,0 +1,21 @@
+#detail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-radius: 5px;
+    margin-top: 8px;
+    text-align: center;
+    background: $light-secondaryContainer;
+    padding: 10px;
+    h2 {
+        color: $dark-tertiaryContainer;
+        margin: 5px;
+    }
+    #info1 {
+        display: flex;
+        justify-content: space-around;
+    }
+    @media (min-width: 958px) {
+        @import "detail-desktop.module";
+    }
+}

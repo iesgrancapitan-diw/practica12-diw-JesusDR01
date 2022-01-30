@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="author" content="Jesus Diaz Rivas" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../styles/house/house.css">
+    <title>Jesús Díaz Rivas</title>
+    <!-- Main js -->
+    <!-- <script src="js/index.js"></script> -->
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <noscript>
+        <p>You must enable javaScript to visit this website </p>
+    </noscript>
+
+    <header>
+        <div id="logo">
+            <a href="../../index.html">
+                <img src="../../img/RuralsTransparent.svg" />
+            </a>
+        </div>
+        <div id="login">
+            <button>
+                <i class="fas fa-user-alt"></i>
+            </button>
+        </div>
+
+        <div id="login-desktop">
+            <button>
+                <p>Iniciar sesión</p>
+            </button>
+            <button>
+                <span>Registrarse</span>
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <form method="get" action="../search/search.html">
+            <div id="input-elements">
+                <input autocomplete="off" required id="search" type="text" name="search"
+                    placeholder="Escribe el nombre del hotel o destino" />
+                <div id="trip-dates">
+                    <div>
+                        <label>
+                            <p>Entrada</p>
+                            <input required name="start" type="date" />
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <p>Salida</p>
+                            <input required name="end" type="date" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <input required type="submit" value="Buscar" />
+        </form>
+    </nav>
+
+    <main>
+        <h1>Galisteo</h1>
+        <!-- Carousel -->
+        <!-- Explicación:
+        Cuando clicas un label se chequea el radioButton, de forma que aprovechamos esto para que podamos darle funcionalidad al carousel.
+        El label permite al navegador añadir accesibilidad de manera nativa, de modo que si el radiobutton es muy pequeño, clicando el label activa el radiobutton.
+        Eso es el "trick" que utilizaremos para crear el carousel.
+        
+        Podemos usar labels como "botones", de manera que podemos crear las flechas y las imágenes pequeñas de abajo para darles funcionalidad.
+        Nos aprovechamos del transform, position y el input checked para mostrar una imagen u otra. 
+        Obviamente no es muy escalable y sería mejor opción usar una librería y escalable de terceros de Js.
+        La ventaja es que es compatible con todos los navegadores. 
+        Uno de los grandes inconvenientes es la cantidad de html que debemos utilizar, porque conforme se va cambiando la imagen, se utiliza un label distinto
+        que apunta a la siguiente / anterior imagen. Esto obviamente no está pensado a gran escala, pero es muy interesante que podamos ser capaces de hacer esto
+        con html css.
+        -->
+        <div id="wrapper">
+            <div id="house">
+                <div class="carousel-container">
+                    <ul class="carousel my-carousel carousel--thumb">
+                        <input class="carousel__activator" type="radio" id="pic1" name="thumb" checked="checked">
+                        <input class="carousel__activator" type="radio" id="pic2" name="thumb">
+                        <input class="carousel__activator" type="radio" id="pic3" name="thumb">
+                        <input class="carousel__activator" type="radio" id="pic4" name="thumb">
+                        <input class="carousel__activator" type="radio" id="pic5" name="thumb">
+                        <div class="carousel__controls">
+                            <label class="carousel__control carousel__control--backward" for="pic5"></label>
+                            <label class="carousel__control carousel__control--forward" for="pic2"></label>
+                        </div>
+                        <div class="carousel__controls">
+                            <label class="carousel__control carousel__control--backward" for="pic1"></label>
+                            <label class="carousel__control carousel__control--forward" for="pic3"></label>
+                        </div>
+                        <div class="carousel__controls">
+                            <label class="carousel__control carousel__control--backward" for="pic2"></label>
+                            <label class="carousel__control carousel__control--forward" for="pic4"></label>
+                        </div>
+                        <div class="carousel__controls">
+                            <label class="carousel__control carousel__control--backward" for="pic3"></label>
+                            <label class="carousel__control carousel__control--forward" for="pic5"></label>
+                        </div>
+                        <div class="carousel__controls">
+                            <label class="carousel__control carousel__control--backward" for="pic4"></label>
+                            <label class="carousel__control carousel__control--forward" for="pic1"></label>
+                        </div>
+                        <li class="carousel__slide"></li>
+                        <li class="carousel__slide"></li>
+                        <li class="carousel__slide"></li>
+                        <li class="carousel__slide"></li>
+                        <li class="carousel__slide"></li>
+                        <div class="carousel__indicators">
+                            <label class="carousel__indicator" for="pic1"></label>
+                            <label class="carousel__indicator" for="pic2"></label>
+                            <label class="carousel__indicator" for="pic3"></label>
+                            <label class="carousel__indicator" for="pic4"></label>
+                            <label class="carousel__indicator" for="pic5"></label>
+                        </div>
+                    </ul>
+                </div>
+                <div id="book-now">
+                    <a href="#reserve">
+                        <button>
+                            Reservar para esta noche
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div id="detail">
+                <h2>Información detallada</h2>
+                <div id="info1">
+                    <p>Habitaciones: 4</p>
+                    <p>Baños: 2</p>
+                </div>
+                <p>Ubicación: c/ Almeida Garret</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="reserve">
+        <form id="commentform">
+            <div id="reserve-data">
+                <h2>Datos de la reserva</h2>
+                <div>
+                    <div id="reserve-people-desktop">
+                        <h2>Número de personas</h2>
+                        <select>
+                            <option selected disabled>
+                                Número de personas
+                            </option>
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                    <div id="trip-dates">
+                        <div>
+                            <label>
+                                <h2>Entrada</h2>
+                                <input required type="date" name="start" placeholder=" entrada *"
+                                    onchange="this.className=(this.value!=''?'has-value':'')">
+
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <h2>Salida</h2>
+                                <input required type="date" name="end" placeholder=" salida *"
+                                    onchange="this.className=(this.value!=''?'has-value':'')">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="reserve-people">
+                        <h2>Número de personas</h2>
+                        <label>
+                            <input checked type="radio" name="order" value="1" />
+                            <i class="fas fa-user-alt"></i>
+                        </label>
+                        <label>
+                            <input type="radio" name="order" value="2" />
+                            <i class="fas fa-user-alt"></i>
+                            <i class="fas fa-user-alt"></i>
+                        </label>
+                        <label>
+                            <input type="radio" name="order" value="3" />
+                            <i class="fas fa-user-alt"></i>
+                            <i class="fas fa-user-alt"></i>
+                            <i class="fas fa-user-alt"></i>
+                        </label>
+                        <label>
+                            <input type="radio" name="order" value="4" />
+                            <i class="fas fa-user-alt"></i>
+                            <i class="fas fa-user-alt"></i>
+                            <i class="fas fa-user-alt"></i>
+                            <i class="fas fa-user-alt"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="user-data">
+                <h2>Introduce tus datos</h2>
+                <div class="comment-form-name">
+                    <label for="name" data-help="pepito">
+                        <h2>Nombre</h2>
+                        <input autocomplete="off" id="name" placeholder="Nombre *" name="name" type="text" value=""
+                            size="30" maxlength="100" aria-describedby="email-notes" required>
+                    </label>
+                </div>
+                <div class="comment-form-last-name">
+                    <label for="last-name" data-help="grillo">
+                        <h2>Apellidos</h2>
+                        <input autocomplete="off" id="last-name" placeholder="Apellidos *" name="last-name" type="text"
+                            value="" size="30" maxlength="100" aria-describedby="email-notes" required>
+                    </label>
+                </div>
+                <div class="comment-form-email">
+                    <label for="email" data-help="Format email@email.com">
+                        <h2>Email</h2>
+                        <input autocomplete="off" id="email" placeholder="Email *" name="email" type="email" value=""
+                            size="30" maxlength="100" aria-describedby="email-notes" required>
+                    </label>
+                </div>
+                <div class="comment-form-phone-number">
+                    <label for="phone-number" data-help="Format 678016360">
+                        <h2>Teléfono</h2>
+                        <input autocomplete="off" id="phone-number" placeholder="Teléfono *" name="phone-number"
+                            type="number" value="" size="30" maxlength="9" aria-describedby="phone-number-notes"
+                            required>
+                    </label>
+                </div>
+                <div class="form-submit">
+                    <input name="submit" type="submit" id="submit" class="submit" value="Reservar">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Aviso legal</a></li>
+            <li><a href="#">Derechos de autor (DMCA)</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="author" content="Jesus Diaz Rivas" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles/normalize.css">
+    <link rel="stylesheet" href="../../styles/search/search.css">
+    <title>Jesús Díaz Rivas</title>
+    <!-- Main js -->
+    <script src="js/search.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rancho&family=Bevan&display=swap&effect=shadow-multiple|3d-float"
+        rel="stylesheet">
+</head>
+
+<body>
+    <noscript>
+        <p>You must enable javaScript to visit this website </p>
+    </noscript>
+
+    <header>
+        <div id="logo">
+            <a href="../../index.html">
+                <img src="../../img/RuralsTransparent.svg" />
+            </a>
+        </div>
+        <div id="login">
+            <button>
+                <i class="fas fa-user-alt"></i>
+            </button>
+        </div>
+
+        <div id="login-desktop">
+            <button>
+                <p>Iniciar sesión</p>
+            </button>
+            <button>
+                <span>Registrarse</span>
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <form method="get" action="../search/search.html">
+            <div id="input-elements">
+                <input autocomplete="off" required id="search" type="text" name="search"
+                    placeholder="Escribe el nombre del hotel o destino" value="Córdoba" />
+                <div id="trip-dates">
+                    <div>
+                        <label>
+                            <p>Entrada</p>
+                            <input required name="start" type="date" />
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <p>Salida</p>
+                            <input required name="end" type="date" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <input required type="submit" value="Buscar" />
+        </form>
+    </nav>
+    <div id="web">
+
+        <main>
+            <div id="head">
+                <div>
+                    <h1>Córdoba: 6 casas rurales encontradas</h1>
+                </div>
+                <select>
+                    <option disabled selected>
+                        Ordenar
+                    </option>
+                    <option>
+                        Precio
+                    </option>
+                    <option>
+                        Número de habitaciones
+                    </option>
+                </select>
+            </div>
+
+            <div id="house-list">
+
+                <div class="house">
+                    <h2>Galisteo</h2>
+                    <img src="../../img/galisteo.jpg" />
+                    <div>
+                        <div>
+                            <span>Habitaciones: 4</span>
+                        </div>
+                        <div>
+                            <span>28€/día</span>
+                        </div>
+                        <div>
+                            <a href="../house/house.html">
+                                <span>RESERVAR</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="house">
+                    <h2>Galisteo</h2>
+                    <img src="../../img/galisteo.jpg" />
+                    <div>
+                        <div>
+                            <span>Habitaciones: 4</span>
+                        </div>
+                        <div>
+                            <span>28€/día</span>
+                        </div>
+                        <div>
+                            <a href="../house/house.html">
+                                <span>RESERVAR</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="house">
+                    <h2>Galisteo</h2>
+                    <img src="../../img/galisteo.jpg" />
+                    <div>
+                        <div>
+                            <span>Habitaciones: 4</span>
+                        </div>
+                        <div>
+                            <span>28€/día</span>
+                        </div>
+                        <div>
+                            <a href="../house/house.html">
+                                <span>RESERVAR</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="house">
+                    <h2>Galisteo</h2>
+                    <img src="../../img/galisteo.jpg" />
+                    <div>
+                        <div>
+                            <span>Habitaciones: 4</span>
+                        </div>
+                        <div>
+                            <span>28€/día</span>
+                        </div>
+                        <div>
+                            <a href="../house/house.html">
+                                <span>RESERVAR</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="house">
+                    <h2>Galisteo</h2>
+                    <img src="../../img/galisteo.jpg" />
+                    <div>
+                        <div>
+                            <span>Habitaciones: 4</span>
+                        </div>
+                        <div>
+                            <span>28€/día</span>
+                        </div>
+                        <div>
+                            <a href="../house/house.html">
+                                <span>RESERVAR</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="house">
+                    <h2>Galisteo</h2>
+                    <img src="../../img/galisteo.jpg" />
+                    <div>
+                        <div>
+                            <span>Habitaciones: 4</span>
+                        </div>
+                        <div>
+                            <span>28€/día</span>
+                        </div>
+                        <div>
+                            <a href="../house/house.html">
+                                <span>RESERVAR</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+
+        <aside>
+
+            <div class="mobile-aside">
+                <h2>
+                    <i class="fas fa-arrow-up"></i>
+                    <span data-default="Ordenar/Filtrar" data-active="Aplicar"></span>
+                    <i class="fas fa-arrow-up"></i>
+                </h2>
+            </div>
+
+            <div id="content">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="desktop-aside">
+                    <h2>Filtrar casas rurales</h2>
+                    <button>
+                        Restablecer filtros
+                    </button>
+                </div>
+
+                <h2>
+                    <i class="fas fa-sliders-h"></i>
+                    Ordenar/Filtrar
+                </h2>
+
+                <div id="order">
+                    <h3>Ordenar
+                        <i class="fas arrow"></i>
+
+                    </h3>
+                    <div>
+                        <label>
+                            <input type="radio" name="ordenar" value="precio" />
+                            Precio
+                        </label>
+                        <label>
+                            <input type="radio" name="ordenar" value="numeroHabitaciones" />
+                            Número de habitaciones
+                        </label>
+                    </div>
+                </div>
+
+                <div id="price">
+                    <h3>Precio
+                        <i class="fas arrow"></i>
+                    </h3>
+                    <div id="range-slider"><span>Desde
+                            <input type="number" value="0" min="0" max="250"> € hasta
+                            <input type="number" value="250" min="0" max="250">€</span>
+                        <input value="0" min="0" max="250" step="1" type="range">
+                        <input value="250" min="0" max="250" step="1" type="range">
+                        <svg width="100%" height="24">
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="#444" stroke-width="12" stroke-dasharray="1 28">
+                            </line>
+                        </svg>
+                    </div>
+                </div>
+                <div id="services">
+                    <h3>Servicios
+                        <i class="fas arrow"></i>
+                    </h3>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="servicios" value="wifi" />
+                            WiFi
+                        </label>
+                        <label>
+                            <input type="checkbox" name="servicios" value="piscina" />
+                            Piscina
+                        </label>
+                        <label>
+                            <input type="checkbox" name="servicios" value="mascotas" />
+                            Mascotas
+                        </label>
+                        <label>
+                            <input type="checkbox" name="servicios" value="senderismo" />
+                            Senderismo
+                        </label>
+                        <label>
+                            <input type="checkbox" name="servicios" value="piragua" />
+                            Piragua
+                        </label>
+                        <label>
+                            <input type="checkbox" name="servicios" value="ski" />
+                            Ski
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Aviso legal</a></li>
+            <li><a href="#">Derechos de autor (DMCA)</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

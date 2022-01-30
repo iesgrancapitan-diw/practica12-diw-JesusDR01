@@ -1,0 +1,33 @@
+#web {
+    main {
+        flex: 3;
+    }
+    select {
+        display: block;
+        border-radius: 6px;
+        border: 1px solid $light-tertiary;
+        height: 48px;
+        text-align: center;
+        outline: none;
+        background-color: $dark-onTertiaryContainer;
+    }
+    
+    #head {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        div {
+            flex: 3;
+        }
+        select {
+            flex: 2;
+            width: 76%;
+            margin-left: 50px;
+        }
+    }
+}
+
+footer{
+    margin-bottom: initial;
+}

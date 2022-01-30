@@ -1,0 +1,35 @@
+.mobile-aside {
+    @include btnEffect($light-house);
+    position: fixed;
+    width: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    z-index: 1050;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    background: $dark-onSecondaryContainer;
+    color: $light-tertiary;
+    cursor: pointer;
+    h2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        span::after {
+            content: attr(data-default);
+        }
+        
+        .active {
+            &::after{
+                content: attr(data-active);
+            }
+        }
+    }
+}
+
+.desktop-aside {
+    display: none;
+}

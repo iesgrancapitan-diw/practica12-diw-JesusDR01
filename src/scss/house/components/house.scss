@@ -1,0 +1,31 @@
+#house {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    #book-now {
+        width: 100%;
+    }
+    #book-now button {
+        width: 100%;
+        padding: 11px;
+        border: 1px solid black;
+        background-color: $light-tertiary;
+        border-radius: 5px;
+        color: white;
+        transition: all 0.2s;
+        @include btnEffect($dark-onTertiary);
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    @media (min-width: $breakpoint-tablet) {
+        margin: 10px 10px 10px 0px;
+    }
+
+    @import "./carousel";
+}

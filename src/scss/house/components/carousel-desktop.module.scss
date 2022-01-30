@@ -1,0 +1,41 @@
+& {
+    width: 920px;
+}
+
+@mixin transformBg($url) {
+    background: url($url) center center/contain no-repeat, url($url) center center/cover;
+}
+.carousel__slide:nth-of-type(1),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(1) {
+    @include transformBg(
+        "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/18658350.jpg?k=5827b8840a4b6b29a8f6f10972f3e37d4e16e9bd68885c326273603c73633412&o=&hp=1"
+    );
+}
+
+.carousel__slide:nth-of-type(2),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(2) {
+    background: url("https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48599284.jpg?k=b3608ec32ee99a25e1960fbd5f79923a0f935ba17ddc39795fc8aac8e4816e03&o=&hp=1")
+            center center/contain no-repeat,
+        url("../../img/backgroundopacity.png") center center/cover;
+}
+
+.carousel__slide:nth-of-type(3),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(3) {
+    @include transformBg(
+        "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/274431024.jpg?k=86e87a484757daa617d9c21e31cc1b8e1da86d9e84c8085f9893b5939ce557d0&o=&hp=1"
+    );
+}
+
+.carousel__slide:nth-of-type(4),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(4) {
+    @include transformBg(
+        "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/48756967.jpg?k=4efcedc7ad7254fbc0413ccee842f6e0819969c528bd8cc682e160f049bec06a&o=&hp=1"
+    );
+}
+
+.carousel__slide:nth-of-type(5),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(5) {
+    @include transformBg(
+        "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/204131024.jpg?k=bae8e156b00ffec8190222222be0f3e706d6fc1502d97e9390d9e7bb9eabd98a&o=&hp=1"
+    );
+}

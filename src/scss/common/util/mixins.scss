@@ -1,0 +1,21 @@
+@mixin btnEffect($bg-color) {
+    transition: all 0.2s;
+    &:hover {
+        background: $bg-color;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+@mixin toggleArrow() {
+    .arrow::before {
+        content: "\f063";
+    }
+
+    &.active {
+        .arrow::before {
+            content: "\f062";
+        }
+    }
+}

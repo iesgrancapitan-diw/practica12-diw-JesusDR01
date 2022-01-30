@@ -1,0 +1,25 @@
+.mobile-aside {
+  position: fixed;
+  width: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  z-index: 1050;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  cursor: pointer; }
+  .mobile-aside h2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+span::before {
+  content: attr(data-default); }
+
+.active span::before {
+  content: attr(data-active) !important; }
+
+.desktop-aside {
+  display: none; }

@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: url("../../img/background.jpg") center no-repeat;
+  background-size: cover;
+  padding: 10px;
+  scroll-behavior: smooth;
+  min-height: 100vh; }
+  body > * {
+    max-width: 1140px;
+    margin: auto; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1d02c;
+  border: 5px solid transparent;
+  border-radius: 11px;
+  background-clip: content-box; }
+
+::-webkit-scrollbar {
+  width: 18px; }
+
+::-webkit-scrollbar-track {
+  background-color: #106e20; }
+
+header {
+  margin-bottom: 10px !important;
+  display: flex; }
+  header #logo {
+    line-height: 0; }
+  header img {
+    background: #deed49;
+    border: 0px solid black;
+    border-radius: 5px;
+    width: 100%; }
+  header button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #deed49;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px; }
+  header #logo img,
+  header button {
+    transition: all 0.2s; }
+    header #logo img:hover,
+    header button:hover {
+      background: #c1d02c; }
+    header #logo img:active,
+    header button:active {
+      transform: scale(0.95); }
+  header #login {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px; }
+  header #login-desktop {
+    display: none; }
+  header #login,
+  header #login-desktop {
+    width: 100%;
+    justify-content: flex-end;
+    flex: 1; }
+  @media (min-width: 768px) {
+    header #login {
+      display: none; }
+    header #login-desktop {
+      display: flex; }
+      header #login-desktop button:first-child {
+        margin-right: 20px; } }
+
+nav {
+  background: #deed49; }
+  nav #search {
+    width: 100%;
+    background: #9ef898;
+    border-radius: 6px;
+    border: 1px solid black;
+    height: 35px;
+    text-align: center; }
+    nav #search::placeholder {
+      text-align: center; }
+  nav #input-elements {
+    flex: 5; }
+  nav > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px; }
+    nav > form input {
+      outline: none; }
+      nav > form input:focus-visible {
+        outline: 2px solid #82db7e; }
+    nav > form #trip-dates {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch; }
+      nav > form #trip-dates div {
+        text-align: center;
+        flex: 1; }
+        nav > form #trip-dates div p {
+          margin-bottom: auto; }
+      nav > form #trip-dates input {
+        width: 100%;
+        background: #9ef898;
+        border-radius: 6px;
+        border: 1px solid black;
+        height: 35px;
+        min-width: 100%; }
+      nav > form #trip-dates ::-webkit-datetime-edit-fields-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-left: 45px; }
+      nav > form #trip-dates ::-webkit-calendar-picker-indicator {
+        cursor: pointer; }
+    nav > form input[type="submit"] {
+      flex: 1;
+      padding: 11px;
+      border: 1px solid black;
+      background-color: #106e20;
+      border-radius: 5px;
+      color: white;
+      transition: all 0.2s;
+      margin-top: 11px;
+      transition: all 0.2s;
+      cursor: pointer; }
+      nav > form input[type="submit"]:hover {
+        background: #003907; }
+      nav > form input[type="submit"]:active {
+        transform: scale(0.95); }
+    @media (min-width: 768px) {
+      nav > form {
+        flex-direction: row; }
+        nav > form input[type="submit"] {
+          margin: 0 0 0 26px; }
+        nav > form #search {
+          padding: 20px; }
+        nav > form img {
+          width: 200px;
+          object-fit: initial;
+          aspect-ratio: initial; } }
+
+h1 {
+  text-align: center;
+  color: #c1d02c;
+  font-family: Rancho;
+  font-size: 60px;
+  text-shadow: 0.04em 0.04em 0 #000 !important; }
+
+#house-list {
+  padding: 17px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+  justify-content: center;
+  grid-gap: 25px; }
+
+.house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5ff90;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: -2px 2px 19px 2px black; }
+  .house h2 {
+    color: #106e20;
+    text-shadow: -1px 1px 1px black;
+    font-family: "Bevan"; }
+  .house img {
+    width: 100%;
+    border-radius: 5px;
+    margin: auto; }
+  .house div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center; }
+    .house div div {
+      text-align: center;
+      margin: 6px;
+      padding: 5px;
+      flex: 1; }
+    .house div div:last-child {
+      cursor: pointer;
+      background-color: #106e20;
+      color: white;
+      transition: all 0.2s; }
+      .house div div:last-child a {
+        text-decoration: none;
+        color: #c1d02c;
+        font-weight: bold; }
+      .house div div:last-child:hover {
+        background: #003907; }
+      .house div div:last-child:active {
+        transform: scale(0.95); }
+    .house div div:first-child {
+      flex: 2;
+      font-size: 0.8em;
+      font-weight: bold; }
+
+footer {
+  border-radius: 5px; }
+  footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c1d02c;
+    height: 60px;
+    text-decoration: none;
+    text-transform: uppercase; }
+    footer a:hover {
+      background: #2e3400;
+      color: #e0e3e3; }
+  footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px; }
+  footer li {
+    position: relative;
+    flex-grow: 1;
+    text-align: center; }
+  footer a {
+    text-decoration: none;
+    color: #191c1d; }
+  footer li:nth-child(4) > a {
+    border-radius: 0 0 5px 5px; }
+  footer li:nth-child(1) > a {
+    border-radius: 5px 0 0 0; }
+  footer li:nth-child(3) > a {
+    border-radius: 0 5px 0 0; }
+  @media screen and (min-width: 532px) {
+    footer li:nth-child(3) > a {
+      border-radius: 0 0 0 0; }
+    footer li:nth-child(4) > a {
+      border-radius: 0 5px 5px 0; }
+    footer li:nth-child(1) > a {
+      border-radius: 5px 0 0 5px; } }
